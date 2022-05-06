@@ -1,0 +1,28 @@
+<div class="container mt-2 mb-4">
+    <h3><strong>List of all the countries in our database</strong></h3>
+    <div class="row g-3 justify-content-center">
+        <div 
+            class="col-md-4 col-lg-4 col-sm-1" 
+            routerLink="/countryDetail/{{country.id}}"
+            *ngFor="let country of allCountries">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <p class="card-title" style="font-size: 18px;">{{country.name}}</p>
+                    <p class="card-text">Capital <br> ({{country.capital}})</p>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="btn-group">
+                            <a routerLink="/countryDetail/{{country.id}}" class="btn btn-sm btn-danger">View Details</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

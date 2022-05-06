@@ -1,0 +1,6 @@
+{
+    "compileerOptions": {
+        "target": "ES2015",
+        "module": "ES2015"
+    }
+}

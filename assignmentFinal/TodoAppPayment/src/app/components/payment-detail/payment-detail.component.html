@@ -1,0 +1,32 @@
+<div class="">
+    <h1 class="display-4 text-center">Payment Detail Register</h1>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <app-payment-form></app-payment-form>
+    </div>
+    <div class="col-md-6">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Card Owner</th>
+                    <th>Card Number</th>
+                    <th>Exp. Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let list of authService.list">
+                    <td (click)="getForm(list)">{{list.cardOwnerName}}</td>
+                    <td (click)="getForm(list)">{{list.cardNumber}}</td>
+                    <td (click)="getForm(list)">{{list.expirationDate | date:"MMM YYYY"}}</td>
+                    <td>
+                        <button class="btn btn-danger btn-lg btn-block" (click)="onDelete(list.paymentDetailId, list.cardOwnerName)">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  

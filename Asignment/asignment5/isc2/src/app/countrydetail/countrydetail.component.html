@@ -1,0 +1,46 @@
+  <div class="container">
+    <h3 class="text-justify">{{country.name}}</h3><br>
+    <table class="table table-borderless" style="width: 50%;">
+      <body>
+        <tr>
+           <td colspan="2">
+            <img src="../assets/{{country.name}}.jpg" class="rounded" style="width: 100%;">
+        </td>
+        </tr>
+        <tr>
+          <th style="color: green; text-align: left;">Capital  </th>
+          <td>({{country.capital}})</td>
+        </tr>
+        <tr>
+          <th style="color: green; text-align: left;">Area  </th>
+          <td colspan="3">:</td>
+          <td style="text-align: left;">{{country.area.toLocaleString()}} km <sup>2</sup></td>
+        </tr>
+        <tr>
+          <th style="color: green; text-align: left;">Population  </th>
+          <td colspan="3">:</td>
+          <td style="text-align: left;">{{country.population}}</td>
+        </tr>
+        <tr>
+          <th style="color: green; text-align: left;">GDP  </th>
+          <td colspan="3">:</td>
+          <td style="text-align: left;">{{country.gdp}} Trilliun</td>
+        </tr>
+        <tr>
+          <th style="color: green; text-align: left;">Currency  </th>
+          <td colspan="3">:</td>
+          <td style="text-align: left;">{{country.currency}}</td>
+        </tr>
+        <button onClick="window.location.href=window.location.href" class="btn btn-danger">Go Back</button>
+      </body>
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+

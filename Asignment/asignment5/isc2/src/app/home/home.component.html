@@ -1,0 +1,27 @@
+<body>
+  <br><br>
+<div>
+    <h3 class="text-center">Three Most Populated Countries</h3>
+    <div class="row g-3 justify-content-center">
+        <button *ngFor="let country of MostPopulated" (click)="countrySelected(country.name)" class="card-population text-white bg-secondary col-4" style="max-width: 18rem;">
+          <div class="card-body">
+            <h4 class="card-title">{{country.name}}</h4>
+            <p class="card-text">{{country.population.toLocaleString()}} <br> people</p>
+          </div>
+        </button>
+    </div>
+</div>
+<br><br>
+<div>
+    <h3 class="text-center">Three Largest Area Countries</h3>
+    <div class="row g-3 justify-content-center">
+        <button *ngFor="let country of LargestArea" (click)="countrySelected(country.name)" class="card-area text-white bg-secondary col-4" style="max-width: 18rem;">
+            <div class="card-body">
+              <h4 class="card-title">{{country.name}}</h4>
+              <p>{{country.area.toLocaleString()}} km<sup>2</sup></p>
+            </div>
+        </button>
+    </div>
+</div>
+</body>
+

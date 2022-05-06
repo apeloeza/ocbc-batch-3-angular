@@ -1,0 +1,49 @@
+<div class="card-body ">
+    <div class="auth-wrapper">
+        <form [formGroup] ="form.inputData" (ngSubmit)="addEmployee()">
+            <h3>Add Employee</h3>
+            <div class="form-group row g-3 align-items-center">
+                <label>Title : </label>
+                <div class="col-auto"><input type="text" class="form-control" formControlName="title" name="title" id="title" required></div>
+                <div class="col-auto"><span style="color: red;" *ngIf="title && title.touched && title.invalid">Masukkan Title Minimal 5 Karakter</span></div>
+            </div>
+            <div class="form-group row g-3 align-items-center">
+                <label>First Name : </label>
+                <div class="col-auto"><input type="text" class="form-control" formControlName="firstname" name="firstname" id="firstname" required></div>
+                <div class="col-auto"><span style="color: red;" *ngIf="firstName && firstName.touched && firstName.invalid">Masukkan First Name Min 3 Karakter</span></div>
+            </div>
+            <div class="form-group row g-3 align-items-center">
+                <label>Last Name : </label>
+                <div class="col-auto"><input type="text" class="form-control" formControlName="lastname" name="lastname" id="lastname" required></div>
+                <div class="col-auto"><span style="color: red;" *ngIf="lastName && lastName.touched && lastName.invalid">Masukkan Last Name Min 3 Karakter</span></div>
+            </div>
+            <div class="form-group row g-3 align-items-center">
+                <label>Email : </label>
+                <div class="col-auto"><input type="text" class="form-control" formControlName="email" name="email" id="email"></div>
+                <div class="col-auto"><span style="color: red;" *ngIf="email && email.touched && email.invalid"> Masukkan dengan format email</span></div>
+            </div>
+            <div class="form-group row g-3 align-items-center">
+                <label>Role : </label>
+                <div class="col-auto"><input type="text" class="form-control" formControlName="role" name="role" id="role"></div>
+                <div class="col-auto"><span style="color: red;" *ngIf="role && role.touched && role.invalid">Pilih Role Yang Sesuai</span></div>
+            </div>
+            <div class="form-group row g-3 align-items-center">
+                <label>Password : </label>
+                <div class="col-auto"><input type="password" class="form-control" formControlName="password" name="password" id="password"></div>
+                <div class="col-auto"><span style="color: red;" *ngIf="password && password.touched && password.invalid">Masukkan Password Minimal 5 Karakter</span></div>
+            </div>
+            <div class="form-group row g-3 align-items-center">
+                <label>Confirm Password : </label>
+                <div class="col-auto"><input type="password" class="form-control" formControlName="confirmpassword" name="confirmpassword" id="confirmpassword"></div>
+                <div class="col-auto"><span style="color: red;" *ngIf="confirmPassword && confirmPassword.touched && confirmPassword.invalid">Confirm Password Tidak Sesuai dengan Password</span></div>
+            </div><br>
+            <div class="error-actions">
+                <a routerLink="/home" class="btn btn-danger btn-log mx-2">
+                    Go Back 
+                </a>
+                <button type="submit" class="btn btn-primary">Add </button>
+            </div>
+            
+        </form>
+    </div>
+</div>

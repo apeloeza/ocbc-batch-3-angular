@@ -1,0 +1,14 @@
+<body>
+    <br>
+<div>
+    <h3 class="text-center">List of All Countries in Our Database</h3>
+    <div class="row g-3 justify-content-center">
+        <button *ngFor="let country of countries" (click)="onCountrySelected(country.name)" class="card text-white bg-secondary col-6" style="max-width: 18rem;">
+            <div class="card-body">
+                <h4 class="card-title">{{country.name}}</h4>
+                <p class="card-text">{{country.population.toLocaleString()}} <br> people</p>
+            </div>
+        </button>
+    </div>
+</div>
+</body>

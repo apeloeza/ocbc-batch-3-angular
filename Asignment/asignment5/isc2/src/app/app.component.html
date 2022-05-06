@@ -1,0 +1,14 @@
+<tbody>
+  <div class="text-center container">
+    <h2 class="text-center">Fun Facts About Countries</h2>
+    <div class="btn-menu">
+      <button (click)="handleClickHome()" class="btn btn-dark btn-lg btn-block"> Go Back To HomePage</button>
+      <button (click)="handleClickAllCountries()" class="btn btn-dark btn-country btn-lg btn-block">List of All Countries</button><br>
+    </div>
+    <app-home *ngIf="page === 'home'" [countries]="countries" (onChangeCountry)="handleClickCountry($event)"></app-home>
+    <app-allcountry *ngIf="page === 'allcountries'" [countries]="countries" (onChangeCountry)="handleClickCountry($event)"></app-allcountry>
+    <app-countrydetail *ngIf="page === 'detail'" [country]="country"></app-countrydetail>
+  </div>
+</tbody>
+
+

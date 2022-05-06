@@ -1,0 +1,103 @@
+
+<div class="auth-wrapper">
+    <form [formGroup]="form.inputData" (ngSubmit)="addEmployee()">
+        <h3>Add Employee</h3>
+        <div class="form-group">
+            <label>Title : </label>
+            <input 
+            type="text" 
+            class="form-control" 
+            formControlName="title" 
+            name="title" 
+            id="title" required> 
+            <span style="color: red;" *ngIf="title && title.touched && title.invalid">
+                Masukkan Title Minimal 5 Karakter
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="">First Name</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            formControlName="firstname" 
+            name="firstName" 
+            id="firstName" required>
+            <span style="color: red;" *ngIf="firstName && firstName.touched && firstName.invalid">
+                Masukkan Last Name Minimal 3 Karakter
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="">Last Name</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            formControlName="lastname" 
+            name="lastname" 
+            id="lastname" required>
+            <span style="color: red;" *ngIf="lastName && lastName.touched && lastName.invalid">
+                Masukkan Last Name Minimal 3 Karakter
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="">Email : </label>
+            <input 
+            type="text" 
+            class="form-control" 
+            formControlName="email" 
+            name="email" 
+            id="email" required>
+            <span style="color: red;" *ngIf="email && email.touched && email.invalid">
+                Masukkan Dengan Format Email
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="">Role</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            formControlName="role" 
+            name="role" 
+            id="role" required>
+            <span style="color: red;" *ngIf="role && role.touched && role.invalid">
+                Pilih Role Yang Sesuai
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="">Password :</label>
+            <input 
+            type="password" 
+            class="form-control" 
+            formControlName="password" 
+            name="password" 
+            id="password" required>
+            <span style="color: red;" *ngIf="password && password.touched && password.invalid">
+                Masukkan Password Minimal 3 Karakter
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label for="">Confirm Password : </label>
+            <input 
+            type="password" 
+            class="form-control" 
+            formControlName="confirmpassword" 
+            name="confirmPassword" 
+            id="confirmPassword" required>
+            <span style="color: red;" *ngIf="confirmPassword && confirmPassword.touched && confirmPassword.invalid">
+                Confirm Password Tidak Sesuai Dengan Password
+            </span>
+        </div>
+
+        <div class="error-action">
+            <a routerLink="/home" class="btn btn-danger btn-log mx-2" >Go Back To Home</a>
+            <button type="submit" class="btn btn-rimary"></button>
+
+        </div>
+
+    </form>
+</div>

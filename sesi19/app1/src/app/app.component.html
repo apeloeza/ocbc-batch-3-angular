@@ -1,0 +1,35 @@
+<app-example
+ [name]="bacthName" 
+ (onMessageClick)="handleChildEvent($event)"
+ ></app-example>
+
+ <h3>
+   {{pesan}}
+ </h3>
+
+ <input [(ngModel)]="name"/> 
+{{name}}
+
+
+<h2>Sesi 21</h2>
+<input #email placeholder="Masukkan email">/<input>
+<button (click)="handleEmail(email.value)">Kirim Email</button>
+<h3>ngIF</h3>
+<p ngIf="name">nama yang dituju adalah"{{nmae}}"</p>
+
+<h3>ngFor</h3>
+
+<ul>
+  <li *ngFor="let user of users" [ngSwitch]="user.id % 2">
+    <span *ngSwitchCase="0" style="color: green"> {{users.name}}</span>
+    <span *ngSwitchCase="1" style="color: red"> {{users.name}}</span>
+    </li>
+  
+</ul>
+
+<!-- sesi 22 -->
+
+<h2>sesi 22</h2>
+<p>NOTE: State yang akan digunakan adalah statenya<code>name</code>pada sesi 20</p>
+
+<h4>{{</h4>
